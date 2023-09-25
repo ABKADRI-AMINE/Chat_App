@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="231.0" prefWidth="406.0" style="-fx-background-color: #404040;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ProfileController">
+   <children>
+      <ImageView fx:id="imageView" fitHeight="150.0" fitWidth="150.0" layoutX="22.0" layoutY="41.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images/emptyProfilePic.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="192.0" layoutY="23.0" prefHeight="186.0" prefWidth="200.0" style="-fx-background-radius: 30; -fx-background-color: #E0E0E0;">
+         <children>
+            <Label layoutX="22.0" layoutY="59.0" text="E-mail:">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="emailLabel" layoutX="22.0" layoutY="85.0" text="garvitgupta58@gmail.com" />
+            <Label layoutX="22.0" layoutY="118.0" text="Contact:">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="contactLabel" layoutX="21.0" layoutY="143.0" text="9897116543" />
+            <HBox alignment="CENTER" layoutY="14.0" prefHeight="35.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+               <children>
+                  <Label fx:id="usernameLabel" text="gg_14">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <Button fx:id="deleteButton" layoutX="127.0" layoutY="148.0" mnemonicParsing="false" text="Delete" visible="false" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

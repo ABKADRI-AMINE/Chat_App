@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="435.0" prefWidth="637.0" style="-fx-background-color: #20120F;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginController">
+   <children>
+      <ImageView fitHeight="378.0" fitWidth="303.0" layoutX="22.0" layoutY="30.0" opacity="0.52" pickOnBounds="true" AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="30.0">
+         <image>
+            <Image url="@../images/1.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="59.0" layoutY="149.0" text=" Welcome to ChatGi" textAlignment="JUSTIFY" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="58.0" layoutY="189.0" text="Connect to anyone anytime anywhere" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Button layoutX="82.0" layoutY="236.0" mnemonicParsing="false" onMouseClicked="#signUp" prefHeight="25.0" prefWidth="176.0" style="-fx-background-color: #E45652;" text="Sign Up" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <VBox layoutX="358.0" layoutY="40.0" prefHeight="355.0" prefWidth="255.0" style="-fx-background-color: #9c2b27;">
+         <children>
+            <HBox alignment="CENTER">
+               <children>
+                  <Label text="Sign in" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="31.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="30.0" top="20.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <Label text="Username" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER">
+               <children>
+                  <TextField fx:id="usernameTextField" promptText="Enter username" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="30.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <Label text="Password" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="passwordTextField" promptText="Enter Password">
+               <VBox.margin>
+                  <Insets bottom="20.0" top="5.0" />
+               </VBox.margin></PasswordField>
+            <Button mnemonicParsing="false" onMouseClicked="#login" prefHeight="25.0" prefWidth="242.0" style="-fx-background-color: #E45652;" text="Log in" textFill="WHITE" VBox.vgrow="ALWAYS">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+         </children>
+         <padding>
+            <Insets left="20.0" right="20.0" />
+         </padding>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox fx:id="outerBody" alignment="CENTER_LEFT" onMouseClicked="#removeCount" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+         <children>
+            <StackPane>
+               <children>
+                  <Circle fx:id="onlineCircle" fill="#9ebdda" radius="20.0" stroke="#00d335" strokeType="INSIDE" strokeWidth="3.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Circle>
+                  <ImageView fx:id="profilePhotoImageView" fitHeight="34.0" fitWidth="34.0" onMouseClicked="#openProfile" pickOnBounds="true">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <image>
+                        <Image url="@../images/emptyProfilePic.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </StackPane>
+            <Label fx:id="userName" alignment="CENTER" text="Garvit Gupta" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets left="8.0" right="8.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Label fx:id="unreadMessageCount" alignment="CENTER" contentDisplay="CENTER" minHeight="20.0" minWidth="20.0" style="-fx-background-color: #006633; -fx-background-radius: 20;" text="5" textFill="WHITE">
+         <HBox.margin>
+            <Insets right="5.0" />
+         </HBox.margin>
+         <padding>
+            <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+         </padding>
+      </Label>
+   </children>
+</HBox>

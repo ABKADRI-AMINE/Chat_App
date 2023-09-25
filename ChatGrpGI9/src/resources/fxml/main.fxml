@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane dividerPositions="0.3595317725752508" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #CCFFFF;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+  <items>
+    <AnchorPane>
+         <children>
+            <VBox prefHeight="398.0" prefWidth="212.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <TextField fx:id="searchTextField" promptText="search" />
+                  <ListView fx:id="peopleListView" onMouseClicked="#fetchMessages" VBox.vgrow="ALWAYS" />
+               </children>
+            </VBox>
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <VBox prefHeight="398.0" prefWidth="380.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <HBox alignment="CENTER_RIGHT" nodeOrientation="LEFT_TO_RIGHT">
+                     <children>
+                        <Button mnemonicParsing="false" onMouseClicked="#inviter" text="inviter" style="-fx-background-color: #663300; -fx-background-radius: 10;"  textFill="WHITE" />
+                        <Button mnemonicParsing="false" onMouseClicked="#createGroup" style="-fx-background-color: #663300; -fx-background-radius: 10;" text="Create Group" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button mnemonicParsing="false" onMouseClicked="#deleteuser" style="-fx-background-color: #663300; -fx-background-radius: 10;" text="delete" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+
+                        <Button mnemonicParsing="false" onMouseClicked="#updateProfile" style="-fx-background-color: #663300; -fx-background-radius: 10;" text="Update Profile" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button mnemonicParsing="false" onMouseClicked="#logout" style="-fx-background-color: #663300; -fx-background-radius: 10;" text="logout" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <ComboBox fx:id="notificationsComboBox" onAction="#handleNotification" prefWidth="130.0" promptText="Notifications" style="-fx-background-color: #CC99FF; -fx-border-color: #6600CC; -fx-background-radius: 10; -fx-border-radius: 10;" visibleRowCount="7">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ComboBox>
+                        <Label fx:id="notificationsCount" alignment="CENTER" minHeight="25.0" minWidth="25.0" style="-fx-background-radius: 20; -fx-background-color: #000066;" text="0" textFill="WHITE">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <ListView fx:id="messageListView" onMouseClicked="#openFile" VBox.vgrow="ALWAYS" />
+                  <HBox>
+                     <children>
+                        <TextField fx:id="messageTextField" onKeyPressed="#pressedEnter" promptText="Say something..." HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin></TextField>
+                        <Button mnemonicParsing="false" onAction="#openChooser" style="-fx-background-color: #000066; -fx-background-radius: 10;" text="Upload" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <Button mnemonicParsing="false" onAction="#sendMessage" style="-fx-background-color: #006600; -fx-background-radius: 10;" text="Send" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </children></AnchorPane>
+  </items>
+   <effect>
+      <InnerShadow />
+   </effect>
+</SplitPane>

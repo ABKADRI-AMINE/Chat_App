@@ -1,0 +1,11 @@
+@font-face{
+    src : url("../font/seguiemj.ttf");
+}
+.text-field{
+    -fx-font-family: seguiemj;
+    -fx-font-size : 15;
+}
+.label{
+    -fx-font-family: seguiemj;
+    -fx-font-size : 15;
+}
